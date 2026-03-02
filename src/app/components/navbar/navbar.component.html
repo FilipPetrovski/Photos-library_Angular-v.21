@@ -1,13 +1,21 @@
 <nav class="navbar">
   <div class="nav-links">
-    <a routerLink="/path" routerLinkActive="active" class="nav-item">
+    <a mat-button routerLink="/path" routerLinkActive="active" class="nav-item">
       <mat-icon>photo_library</mat-icon>
-      <span>Photos</span>
+      <span class="link-text">Photos</span>
     </a>
 
-    <a routerLink="/favorites" routerLinkActive="active" class="nav-item">
-      <mat-icon>favorite</mat-icon>
-      <span>Favorites</span>
+    <a mat-button routerLink="/favorites" routerLinkActive="active" class="nav-item">
+      <mat-icon
+        [matBadge]="favoriteCount()"
+        [matBadgeHidden]="favoriteCount() === 0"
+        matBadgeColor="accent"
+        matBadgeSize="medium"
+        matBadgeOverlap="false"
+      >
+        favorite
+      </mat-icon>
+      <span class="link-text">Favorites</span>
     </a>
   </div>
   <mat-divider class="nav-divider" />

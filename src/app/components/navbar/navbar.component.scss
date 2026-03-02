@@ -35,6 +35,19 @@
         font-size: 24px;
         width: 24px;
         height: 24px;
+        position: relative;
+        margin-right: 4px;
+
+        ::ng-deep .mat-badge-content {
+          background-color: colors.$favorite-item;
+          color: colors.$white;
+          font-weight: typography.$font-weight-bold;
+          left: 20px;
+        }
+      }
+
+      .link-text {
+        margin-left: 4px;
       }
 
       &:hover {

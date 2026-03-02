@@ -16,6 +16,8 @@ export class PhotoService {
     this.photosSignal().filter((p) => this.favoritesSignal().has(p.id)),
   );
 
+  readonly favoritePhotosCount = computed(() => this.favoritePhotos().length);
+
   constructor() {
     this.loadMore();
   }
