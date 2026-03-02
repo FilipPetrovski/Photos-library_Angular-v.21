@@ -1,24 +1,13 @@
 <div class="photo-grid">
   @for (photo of photos(); track photo.id) {
-    <div class="photo-card">
-      <div class="img-wrapper">
-        <img [src]="photo.url" alt="Random Image" loading="lazy" />
-      </div>
-
-      <div class="card-footer">
-        <span class="photo-id">Photo #{{ photo.id }}</span>
-        <button mat-icon-button (click)="toggleFavorite(photo.id)">
-          <mat-icon [class.is-fav]="isFavorite(photo.id)">
-            {{ isFavorite(photo.id) ? 'favorite' : 'favorite_border' }}
-          </mat-icon>
-        </button>
-      </div>
-    </div>
+    <pl-photo
+      [photo]="photo"
+      [isFavorite]="isFavorite(photo.id)"
+      (toggle)="toggleFavorite($event)"
+    />
   }
 </div>
 
 <div class="scroll-anchor" plInfiniteScroll (scrolled)="loadMore()"></div>
 
-@if (isLoading()) {
-  <pl-loading-spinner [visible]="isLoading()" />
-}
+<pl-loading-spinner [visible]="isLoading()" />

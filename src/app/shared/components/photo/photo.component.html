@@ -1,0 +1,14 @@
+<div class="photo-card">
+  <div class="img-wrapper">
+    <img [src]="photo().url" alt="Random Image" loading="lazy" />
+  </div>
+
+  <div class="card-footer">
+    <span class="photo-id">Photo #{{ photo().id }}</span>
+    <button mat-icon-button (click)="onToggle()" aria-label="Toggle favorite">
+      <mat-icon [class.is-fav]="isFavorite()">
+        {{ isFavorite() ? 'favorite' : 'favorite_border' }}
+      </mat-icon>
+    </button>
+  </div>
+</div>
