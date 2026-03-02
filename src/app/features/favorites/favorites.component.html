@@ -1,1 +1,20 @@
-<p>favorites works!</p>
+<div class="favorites-container">
+  @if (favorites().length > 0) {
+    <div class="photo-grid">
+      @for (photo of favorites(); track photo.id) {
+        <pl-photo
+          [photo]="photo"
+          [isFavorite]="true"
+          (toggle)="toggleFavorite($event)"
+          (click)="goToDetails(photo.id)"
+        />
+      }
+    </div>
+  } @else {
+    <div class="empty-state">
+      <mat-icon>favorite_border</mat-icon>
+      <h2>No favorites yet</h2>
+      <p>Your favorite photos will appear here once you heart them.</p>
+    </div>
+  }
+</div>

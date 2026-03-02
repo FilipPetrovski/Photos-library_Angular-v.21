@@ -15,7 +15,10 @@ export class PhotoComponent {
 
   toggle = output<number>();
 
-  onToggle() {
+  onToggle(event: MouseEvent) {
+    event.stopPropagation();
+    event.preventDefault();
+
     this.toggle.emit(this.photo().id);
   }
 }

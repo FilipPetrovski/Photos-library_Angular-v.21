@@ -5,7 +5,7 @@
 
   <div class="card-footer">
     <span class="photo-id">Photo #{{ photo().id }}</span>
-    <button mat-icon-button (click)="onToggle()" aria-label="Toggle favorite">
+    <button mat-icon-button (click)="onToggle($event)" aria-label="Toggle favorite">
       <mat-icon [class.is-fav]="isFavorite()">
         {{ isFavorite() ? 'favorite' : 'favorite_border' }}
       </mat-icon>
