@@ -61,4 +61,8 @@ export class PhotoService {
   isFavorite(id: number) {
     return this.favoritesSignal().has(id);
   }
+
+  getPhotoUrl(id: number, width = 400, height = 600): string {
+    return `https://picsum.photos/id/${id}/${width}/${height}`;
+  }
 }

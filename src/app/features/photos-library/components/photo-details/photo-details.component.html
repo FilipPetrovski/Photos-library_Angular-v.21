@@ -1,0 +1,14 @@
+<div class="detail-wrapper">
+  <div class="photo-container">
+    <img [src]="imageUrl" alt="Full screen photo" />
+  </div>
+
+  @if (isFavorite()) {
+    <div class="actions">
+      <button mat-flat-button color="warn" (click)="remove()">
+        <mat-icon>delete</mat-icon>
+        Remove from favorites
+      </button>
+    </div>
+  }
+</div>
