@@ -8,29 +8,21 @@
   background: colors.$glass-bg;
   backdrop-filter: blur(10px);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 1000;
 
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 2rem;
-    right: 2rem;
-    height: 1px;
-    background-color: colors.$border-color;
-  }
-
   .nav-links {
     display: flex;
     gap: 2rem;
+    flex: 1;
+    align-items: center;
 
     .nav-item {
       display: flex;
       align-items: center;
       gap: 0.5rem;
-
       text-decoration: none;
       color: colors.$text-muted;
       font-size: typography.$font-size-lg;
@@ -58,4 +50,9 @@
       }
     }
   }
+}
+
+.nav-divider {
+  width: calc(100% - 4rem);
+  border-top-color: colors.$border-color !important;
 }
