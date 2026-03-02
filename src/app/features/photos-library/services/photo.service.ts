@@ -1,12 +1,16 @@
-import { computed, Injectable, signal } from '@angular/core';
+import { computed, effect, inject, Injectable, signal } from '@angular/core';
+import { LocalStorageService } from '../../../shared/services/local-storage.service';
 
 @Injectable({ providedIn: 'root' })
 export class PhotoService {
+  private storageService = inject(LocalStorageService);
+
   private readonly itemsPerPage = 12;
   private currentIdOffset = 0;
 
   private photosSignal = signal<{ id: number; url: string }[]>([]);
-  private favoritesSignal = signal<Set<number>>(new Set());
+
+  private favoritesSignal = signal<Set<number>>(new Set(this.storageService.getFavorites()));
   private loadingSignal = signal<boolean>(false);
 
   readonly photos = this.photosSignal.asReadonly();
@@ -16,10 +20,15 @@ export class PhotoService {
     this.photosSignal().filter((p) => this.favoritesSignal().has(p.id)),
   );
 
-  readonly favoritePhotosCount = computed(() => this.favoritePhotos().length);
+  readonly favoritePhotosCount = computed(() => this.favoritesSignal().size);
 
   constructor() {
     this.loadMore();
+
+    effect(() => {
+      const ids = Array.from(this.favoritesSignal());
+      this.storageService.saveFavorites(ids);
+    });
   }
 
   async loadMore() {
