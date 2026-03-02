@@ -1,0 +1,20 @@
+@use 'colors';
+
+.spinner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(colors.$bg-color, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  pointer-events: all;
+}
+
+:host ::ng-deep .mat-mdc-progress-spinner {
+  --mdc-circular-progress-active-indicator-color: #{colors.$primary};
+}

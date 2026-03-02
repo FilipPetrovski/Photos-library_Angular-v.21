@@ -18,5 +18,5 @@
 </div>
 
 @if (isLoading()) {
-  <div class="loading-spinner">Emulating API Call...</div>
+  <pl-loading-spinner [visible]="isLoading()" />
 }
