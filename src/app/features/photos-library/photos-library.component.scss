@@ -41,7 +41,13 @@
     }
 
     mat-icon.is-fav {
-      color: #ff4081;
+      color: colors.$favorite-item;
     }
+  }
+
+  .scroll-anchor {
+    height: 20px;
+    width: 100%;
+    margin-top: 1rem;
   }
 }

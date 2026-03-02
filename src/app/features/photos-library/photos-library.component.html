@@ -17,6 +17,8 @@
   }
 </div>
 
+<div class="scroll-anchor" plInfiniteScroll (scrolled)="loadMore()"></div>
+
 @if (isLoading()) {
   <pl-loading-spinner [visible]="isLoading()" />
 }

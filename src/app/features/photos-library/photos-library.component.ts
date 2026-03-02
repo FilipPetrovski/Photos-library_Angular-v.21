@@ -2,12 +2,13 @@ import { Component, inject, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { LoadingSpinnerComponent } from '../../shared/components/loading-spinner/loading-spinner.component';
-import { PhotoService } from '../../shared/services/photo.service';
+import { InfiniteScrollDirective } from '../../shared/directives/infinite-scroll.directive';
+import { PhotoService } from './services/photo.service';
 
 @Component({
   selector: 'pl-photos-library',
   standalone: true,
-  imports: [MatIconModule, MatButtonModule, LoadingSpinnerComponent],
+  imports: [MatIconModule, MatButtonModule, LoadingSpinnerComponent, InfiniteScrollDirective],
   templateUrl: './photos-library.component.html',
   styleUrl: './photos-library.component.scss',
 })
