@@ -1,0 +1,30 @@
+@use 'colors';
+
+:host {
+  display: block;
+  height: 100vh;
+  padding: 1rem;
+  background-color: colors.$bg-color;
+}
+
+.app-frame {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: colors.$white;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+  border: 1px solid colors.$border-color;
+}
+
+.scroll-container {
+  flex: 1;
+  overflow-y: auto;
+
+  .content-area {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+}
