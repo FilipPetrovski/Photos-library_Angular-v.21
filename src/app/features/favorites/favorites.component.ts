@@ -22,6 +22,6 @@ export class FavoritesComponent {
   }
 
   goToDetails(id: number) {
-    this.router.navigate([`photos/${id}`]);
+    this.router.navigate(['/photos', id]);
   }
 }

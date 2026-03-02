@@ -16,9 +16,14 @@ export class PhotoService {
   readonly photos = this.photosSignal.asReadonly();
   readonly isLoading = this.loadingSignal.asReadonly();
 
-  readonly favoritePhotos = computed(() =>
-    this.photosSignal().filter((p) => this.favoritesSignal().has(p.id)),
-  );
+  readonly favoritePhotos = computed(() => {
+    const ids = Array.from(this.favoritesSignal());
+
+    return ids.map((id) => ({
+      id,
+      url: this.getPhotoUrl(id, 200, 300),
+    }));
+  });
 
   readonly favoritePhotosCount = computed(() => this.favoritesSignal().size);
 
