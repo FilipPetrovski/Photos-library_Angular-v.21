@@ -1,17 +1,34 @@
+@use '@angular/material' as mat;
 @use 'colors';
 @use 'typography';
 
-html,
-body {
+html {
   height: 100%;
+  @include mat.theme(
+    (
+      color: (
+        primary: mat.$magenta-palette,
+        tertiary: mat.$violet-palette,
+      ),
+      typography: Roboto,
+      density: 0,
+    )
+  );
+}
+
+body {
+  color-scheme: light;
+  background-color: colors.$bg-color;
+  color: colors.$text-color;
   margin: 0;
+  height: 100%;
   overflow: hidden;
+
   font-family:
     'Inter',
     system-ui,
     -apple-system,
     sans-serif;
-  background-color: colors.$bg-color;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
