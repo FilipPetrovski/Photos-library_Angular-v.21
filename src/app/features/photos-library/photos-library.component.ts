@@ -2,7 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { LoadingSpinnerComponent } from '../../shared/components/loading-spinner/loading-spinner.component';
 import { PhotoComponent } from '../../shared/components/photo/photo.component';
 import { InfiniteScrollDirective } from '../../shared/directives/infinite-scroll.directive';
-import { PhotoService } from './services/photo.service';
+import { PhotoService } from '../../shared/services/photo-service/photo.service';
 
 @Component({
   selector: 'pl-photos-library',

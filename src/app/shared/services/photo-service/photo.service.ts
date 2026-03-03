@@ -1,6 +1,6 @@
 import { computed, effect, inject, Injectable, signal } from '@angular/core';
-import { LocalStorageService } from '../../../shared/services/local-storage.service';
-import { Photo } from '../models/photo.interface';
+import { Photo } from '../../../features/photos-library/models/photo.interface';
+import { LocalStorageService } from '../local-storage/local-storage.service';
 
 @Injectable({ providedIn: 'root' })
 export class PhotoService {

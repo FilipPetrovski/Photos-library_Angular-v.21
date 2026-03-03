@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
 import { PhotoComponent } from '../../shared/components/photo/photo.component';
-import { PhotoService } from '../photos-library/services/photo.service';
+import { PhotoService } from '../../shared/services/photo-service/photo.service';
 
 @Component({
   selector: 'pl-favorites',

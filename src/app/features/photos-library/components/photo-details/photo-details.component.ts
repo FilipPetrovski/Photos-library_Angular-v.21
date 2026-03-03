@@ -3,7 +3,7 @@ import { Component, inject, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { ActivatedRoute } from '@angular/router';
-import { PhotoService } from '../../services/photo.service';
+import { PhotoService } from '../../../../shared/services/photo-service/photo.service';
 
 @Component({
   selector: 'pl-photo-details',

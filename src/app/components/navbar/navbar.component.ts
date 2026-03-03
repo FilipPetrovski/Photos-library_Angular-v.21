@@ -3,7 +3,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { PhotoService } from '../../features/photos-library/services/photo.service';
+import { PhotoService } from '../../shared/services/photo-service/photo.service';
 
 @Component({
   selector: 'pl-navbar',
