@@ -4,7 +4,6 @@ import { BaseLayoutComponent } from './components/layouts/base-layout/base-layou
 @Component({
   selector: 'pl-root',
   templateUrl: './app.html',
-  styleUrl: './app.scss',
   imports: [BaseLayoutComponent],
 })
 export class App {}

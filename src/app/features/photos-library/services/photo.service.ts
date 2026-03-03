@@ -1,5 +1,6 @@
 import { computed, effect, inject, Injectable, signal } from '@angular/core';
 import { LocalStorageService } from '../../../shared/services/local-storage.service';
+import { Photo } from '../models/photo.interface';
 
 @Injectable({ providedIn: 'root' })
 export class PhotoService {
@@ -8,7 +9,7 @@ export class PhotoService {
   private readonly itemsPerPage = 12;
   private currentIdOffset = 0;
 
-  private photosSignal = signal<{ id: number; url: string }[]>([]);
+  private photosSignal = signal<Photo[]>([]);
 
   private favoritesSignal = signal<Set<number>>(new Set(this.storageService.getFavorites()));
   private loadingSignal = signal<boolean>(false);
