@@ -1,3 +1,4 @@
+import { NgOptimizedImage } from '@angular/common';
 import { Component, inject, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -6,7 +7,7 @@ import { PhotoService } from '../../services/photo.service';
 
 @Component({
   selector: 'pl-photo-details',
-  imports: [MatButtonModule, MatIconModule],
+  imports: [MatButtonModule, MatIconModule, NgOptimizedImage],
   templateUrl: './photo-details.component.html',
   styleUrl: './photo-details.component.scss',
 })

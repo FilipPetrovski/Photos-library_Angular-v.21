@@ -1,6 +1,6 @@
 <div class="detail-wrapper">
   <div class="photo-container">
-    <img [src]="imageUrl" alt="Full screen photo" />
+    <img [ngSrc]="imageUrl" fill alt="Full screen photo" priority />
   </div>
 
   @if (isFavorite()) {
