@@ -1,5 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-import { describe, expect, it, vi } from 'vitest';
 import { PhotoComponent } from './photo.component';
 
 describe('PhotoComponent', () => {

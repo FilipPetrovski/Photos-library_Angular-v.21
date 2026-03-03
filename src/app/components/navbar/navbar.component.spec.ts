@@ -1,6 +1,5 @@
 import { TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
-import { beforeEach, describe, expect, it } from 'vitest';
 import { PhotoServiceMock } from '../../shared/services/photo-service/mocks/photo.service.mock';
 import { PhotoService } from '../../shared/services/photo-service/photo.service';
 import { NavbarComponent } from './navbar.component';

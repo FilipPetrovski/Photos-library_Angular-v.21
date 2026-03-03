@@ -1,6 +1,5 @@
 import { TestBed } from '@angular/core/testing';
 import { ActivatedRoute } from '@angular/router';
-import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { PhotoServiceMock } from '../../../../shared/services/photo-service/mocks/photo.service.mock';
 import { PhotoService } from '../../../../shared/services/photo-service/photo.service';
 import { PhotoDetailsComponent } from './photo-details.component';

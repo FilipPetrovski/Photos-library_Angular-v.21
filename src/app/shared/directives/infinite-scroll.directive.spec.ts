@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { InfiniteScrollDirective } from './infinite-scroll.directive';
 
 let observerCallback: (entries: any[]) => void;

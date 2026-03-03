@@ -1,5 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { LocalStorageService } from '../local-storage/local-storage.service';
 import { PhotoService } from './photo.service';
 

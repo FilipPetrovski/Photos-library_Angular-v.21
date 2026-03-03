@@ -1,6 +1,5 @@
 import { TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { InfiniteScrollDirective } from '../../shared/directives/infinite-scroll.directive';
 import { PhotoServiceMock } from '../../shared/services/photo-service/mocks/photo.service.mock';
 import { PhotoService } from '../../shared/services/photo-service/photo.service';
