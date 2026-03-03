@@ -1,18 +1,18 @@
 import { TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
 import { beforeEach, describe, expect, it } from 'vitest';
-import { BaseLayoutComponent } from './base-layout.component';
+import { AppComponent } from './app.component';
 
-describe('BaseLayoutComponent', () => {
+describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BaseLayoutComponent],
+      imports: [AppComponent],
       providers: [provideRouter([])],
     }).compileComponents();
   });
 
   it('should be successfully instantiated', () => {
-    const fixture = TestBed.createComponent(BaseLayoutComponent);
+    const fixture = TestBed.createComponent(AppComponent);
     const component = fixture.componentInstance;
     expect(component).toBeTruthy();
   });

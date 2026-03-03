@@ -3,7 +3,7 @@ import { BaseLayoutComponent } from './components/layouts/base-layout/base-layou
 
 @Component({
   selector: 'pl-root',
-  templateUrl: './app.html',
+  templateUrl: './app.component.html',
   imports: [BaseLayoutComponent],
 })
-export class App {}
+export class AppComponent {}
