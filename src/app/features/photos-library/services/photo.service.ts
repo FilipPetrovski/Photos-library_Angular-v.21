@@ -48,7 +48,7 @@ export class PhotoService {
       const id = this.currentIdOffset++;
       return {
         id,
-        url: `https://picsum.photos/id/${id}/200/300`,
+        url: `https://picsum.photos/seed/${id}/200/300`,
       };
     });
 
@@ -69,6 +69,6 @@ export class PhotoService {
   }
 
   getPhotoUrl(id: number, width = 400, height = 600): string {
-    return `https://picsum.photos/id/${id}/${width}/${height}`;
+    return `https://picsum.photos/seed/${id}/${width}/${height}`;
   }
 }
