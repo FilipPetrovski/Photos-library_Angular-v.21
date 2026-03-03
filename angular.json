@@ -71,7 +71,19 @@
           "defaultConfiguration": "development"
         },
         "test": {
-          "builder": "@angular/build:unit-test"
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "coverageExclude": [
+              "src/app/**/*.spec.ts",
+              "src/app/**/*.mock.ts",
+              "src/app/**/mocks/**",
+              "src/app/**/*.html",
+              "src/app/**/*.scss",
+              "src/main.ts",
+              "src/app/app.config.ts",
+              "src/app/app.routes.ts"
+            ]
+          }
         }
       }
     }
